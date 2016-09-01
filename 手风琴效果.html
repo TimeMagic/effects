@@ -154,7 +154,19 @@ function initList(){
 //执行初始化函数
 initList();
 </script>-->
-	
+
+
+<!--    var nav = document.getElementById('nav');    //tab 选项js代码
+    var navList = nav.getElementsByTagName('a');
+    for(var i = 0;i < navList.length; i++){
+        navList[i].onclick = function(){
+            for(var j = 0;j < navList.length; j++){
+                navList[j].className = ''
+            }
+            this.className = 'on'
+        }
+    }
+-->
 	
 </body>
 </html>
