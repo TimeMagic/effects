@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>手风情效果</title>
+	<style type="text/css">
+		*{ margin: 0; padding:0; }
+		ul,li{ list-style: none;}
+		.wrapper{ border:solid 1px #ccc; margin-top: 12px; width: 938px; height: 128px; overflow: hidden;}
+		.wrapper li{width: 156px; height: 128px; float: left; overflow: hidden; -webkit-transition:all .1s linear;-moz-transition:all .1s linear;-o-transition:all .1s linear;-ms-transition:all .1s linear;transition:all .1s linear}
+		.wrapper li *{-webkit-transition:all .1s linear;-moz-transition:all .1s linear;-o-transition:all .1s linear;-ms-transition:all .1s linear;transition:all .1s linear}
+		.wrapper a {width: 156px; height: 128px; display: block; position:relative;  overflow: hidden;}
+		.wrapper a:hover .mask{-ms-filter:"alpha(Opacity=0)";filter:alpha(opacity=0);opacity:0;-webkit-transition:opacity .2s ease-in;-moz-transition:opacity .2s ease-in;-o-transition:opacity .2s ease-in;-ms-transition:opacity .2s ease-in;transition:opacity .2s ease-in}
+
+
+		.wrapper li img{ height:72px;width:117px;position:absolute;bottom:0;right:-13px;}
+		.wrapper li .info{ position:absolute;top:0;left:0;width:136px;padding:4px 10px }
+		.wrapper .line{height:128px;width:0;font-size:0;border-right:1px dashed #cacaca;position:absolute;right:0;top:4px; }
+		.wrapper .info h3{font-size:14px;font-weight:700; margin:14px 0;}
+		.wrapper li .info p{color:#868686;font-size:12px;overflow:hidden;width:136px;height:22px;line-height:22px}
+		.wrapper li .info p.price{font-size:14px;font-style:italic;color:#fa2a5d;height:35px}
+		.wrapper li .info p.price strong{font-size:22px;font-family:Arial;padding-right:2px}
+		.wrapper li .info p.price i{font-size:14px}
+
+		.wrapper .mask{height:128px;width:156px;display:block;position:absolute;top:0;left:0;background:#000;-ms-filter:"alpha(Opacity=0)";filter:alpha(opacity=0);opacity:0;-webkit-transition:opacity .2s ease-in;-moz-transition:opacity .2s ease-in;-o-transition:opacity .2s ease-in;-ms-transition:opacity .2s ease-in;transition:opacity .2s ease-in;_display:none!important}
+
+		.wrapper .big{width:314px}
+		.wrapper .big a{width:314px}
+		.wrapper .big img{width:195px;height:120px;right:0;bottom:0}
+		.wrapper .big .info{width:294px}
+		.wrapper .big .info h3{font-size:18px; margin: 18px 0;}
+		.wrapper .big .info p{font-size:14px;width:166px}
+		.wrapper .big .info p.price{font-size:16px;padding-top:7px}
+		.wrapper .big .info p.price strong{font-size:28px}
+		.wrapper .big .info p.price i{font-size:16px}
+
+		.wrapper:hover .mask{-ms-filter:"alpha(Opacity=15)";filter:alpha(opacity=15);opacity:.15;-webkit-transition:opacity .2s ease-in;-moz-transition:opacity .2s ease-in;-o-transition:opacity .2s ease-in;-ms-transition:opacity .2s ease-in;transition:opacity .2s ease-in}
+	</style>
+</head>
+<body>
+	<div id="subject" class="wrapper">
+		<ul>
+			<li>
+				<a href="#">
+					<img src="http://gtms01.alicdn.com/tps/i1/T1Lvt3Fv4kXXbA5QAK-195-120.jpg_Q90.jpg">
+					<div class="info">
+						<h3 style="color:#f62368">聚美优品</h3>
+						<p>聚美妆1/2周年庆</p>
+						<p class="price"><strong>1</strong><i>折起</i></p>
+					</div>
+					<div class="line"></div>
+					<div class="mask"></div>
+				</a>
+			</li>
+			<li class="big">
+				<a href="#">
+					<img src="http://gtms01.alicdn.com/tps/i1/T1qxGLFsVbXXbA5QAK-195-120.jpg_Q90.jpg">
+					<div class="info">
+						<h3>Baby购</h3>
+						<p>宝宝该换装了，新品抢购</p>
+						<p class="price"><strong>2.5</strong><i>折起</i></p>
+					</div>
+					<div class="line"></div>
+					<div class="mask"></div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="http://gtms02.alicdn.com/tps/i2/T1KOSNFxXaXXbA5QAK-195-120.jpg_Q90.jpg">
+					<div class="info">
+						<h3 style="color:#d61939">时装团</h3>
+						<p>时尚春装，清新小潮搭配</p>
+						<p class="price"><strong>1</strong><i>折起</i></p>
+					</div>
+					<div class="line"></div>
+					<div class="mask"></div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="http://gtms04.alicdn.com/tps/i4/T1CCeIFrVbXXbA5QAK-195-120.jpg_Q90.jpg">
+					<div class="info">
+						<h3>TV购</h3>
+						<p>补血养颜 就这么简单</p>
+						<p class="price"><strong>2.6</strong><i>折起</i></p>
+					</div>
+					<div class="line"></div>
+					<div class="mask"></div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="http://gtms01.alicdn.com/tps/i1/T1jmKJFyJbXXbA5QAK-195-120.jpg_Q90.jpg">
+					<div class="info">
+						<h3 style="color:#6f9400">聚新鲜</h3>
+						<p>最纯正的泰国香米</p>
+						<p class="price"><strong>5</strong><i>折起</i></p>
+					</div>
+					<div class="line"></div>
+					<div class="mask"></div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".wrapper li").mouseover(function(){
+				var wrapper = $(".wrapper");
+				wrapper.find("li").removeClass("big");
+				$(this).addClass("big");
+			});
+		});
+
+	</script>
+</body>
+</html>
