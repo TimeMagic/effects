@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>导航菜单</title>
+	<style type="text/css">
+		*{margin: 0; padding: 0;}
+		ul,li{ list-style: none; }
+		a{ text-decoration: none; color:black;}
+		.nav1{ width: 100px; }
+		.nav1 li a,.nav2 li a,.nav3 li a{ display: inline-block; text-align: center; height: 30px; line-height: 30px; width: 100px; background-color: #efefef; margin-bottom: 1px; }
+		.nav1 li a:hover,.nav2 li a:hover{ background-color: #f60; color: #fff; }
+		.nav2 li,.nav3 li{ float: left; }
+		.nav2,.nav3{ overflow: hidden; }
+		.nav3 li a{ background: url(http://img.mukewang.com/53846438000168f901200060.jpg); display: block; width: 120px; }
+		.nav3 li a:hover,.nav3 .on{background:url(http://img.mukewang.com/53846438000168f901200060.jpg) 0px -30px no-repeat;  color:#fff;}
+		.nav4 li a:hover{ background-color: orange; height: 40px; line-height: 40px; color: #fff; }
+
+
+
+		.nav {height: 30px; border-bottom: 5px solid #F60; margin-left:50px; width:600px;}
+		.nav li { float: left; position:relative; height:30px; width:120px }
+		.nav li a { display: block; height: 30px; text-align: center; line-height: 30px; width:120px; background: #efefef; margin-left: 1px; }
+		.subNav{ position:absolute; top:30px; left:0; width:120px; height:0; overflow:hidden}
+		.subNav li a{ background:#ddd }
+		.subNav li a:hover{ background:#efefef}
+
+	</style>
+</head>
+<body>
+	<ul class="nav1">   <!-- 垂直导航-->		
+		<li><a href="">首页</a></li>
+		<li><a href="">新闻</a></li>
+		<li><a href="">企业</a></li>
+		<li><a href="">招聘</a></li>
+		<li><a href="">产品</a></li>
+	</ul>
+	<ul class="nav2">	<!-- 横向导航-->
+		<li><a href="">首页</a></li>
+		<li><a href="">新闻</a></li>
+		<li><a href="">企业</a></li>
+		<li><a href="">招聘</a></li>
+		<li><a href="">产品</a></li>
+	</ul>
+	<ul class="nav3">	<!-- 圆角导航-->
+		<li><a class="on" href="">首页</a></li>
+		<li><a href="">新闻</a></li>
+		<li><a href="">企业</a></li>
+		<li><a href="">招聘</a></li>
+		<li><a href="">产品</a></li>
+	</ul>
+	<ul class="nav2 nav4">	<!-- 横向导航-->
+		<li><a href="">首页</a></li>
+		<li><a href="">新闻</a></li>
+		<li><a href="">企业</a></li>
+		<li><a href="">招聘</a></li>
+		<li><a href="">产品</a></li>
+	</ul>
+	<ul id="nav" class="nav">
+	    <li><a href="#">一级菜单</a>
+	    	<ul class="subNav">
+	        	<li><a href="#">二级菜单</a></li>
+	            <li><a href="#">二级菜单</a></li>
+	            <li><a href="#">二级菜单</a></li>
+	            <li><a href="#">二级菜单</a></li>
+	        </ul>
+	    </li>
+	    <li><a href="#">一级菜单</a>
+	    	<ul class="subNav">
+	        	<li><a href="#">二级菜单</a></li>
+	            <li><a href="#">二级菜单</a></li>
+	            <li><a href="#">二级菜单</a></li>
+	            <li><a href="#">二级菜单</a></li>
+	        </ul>
+	    </li>
+	    <li><a href="#">一级菜单</a></li>
+	    <li><a href="#">一级菜单</a></li>
+	    <li><a href="#">一级菜单</a></li>
+	</ul>
+	<script type="text/javascript">
+		window.onload = function(){
+			var olist = document.getElementById("nav").getElementsByTagName("li");
+			var len = olist.length;
+			for (var i = 0; i < len; i++) {
+				olist[i].onmouseover = function(){
+					var sub = this.getElementsByTagName("ul")[0];
+					if(sub){
+						var that = sub;
+						var time = null;
+						clearInterval(that.time);
+						that.time = setInterval(function(){
+							that.style.height = that.offsetHeight + 16 +"px";
+							if(that.offsetHeight >= 120){
+								clearInterval(that.time);
+							}
+						},60);
+					}
+				};
+				olist[i].onmouseout = function(){
+					var sub = this.getElementsByTagName("ul")[0];
+					if(sub){
+						var that = sub;
+						var time = null;
+						clearInterval(that.time);
+						that.time = setInterval(function(){
+							that.style.height = that.offsetHeight - 16 +"px";
+							if(that.offsetHeight = 0){
+								clearInterval(that.time);
+							}
+						},60);
+					}
+				};
+			}
+		}
+	</script>
+</body>
+</html>
