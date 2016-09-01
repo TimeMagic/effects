@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>返回顶部</title>
+	<style type="text/css">
+		#btn{
+			width: 40px;
+			height: 40px;
+			position:fixed;
+			right:60px;
+			bottom:30px;
+			background: url(http://img.mukewang.com/535e0dc100010e9c00400080.jpg) no-repeat left top;
+			cursor:pointer;
+			display: none;
+			z-index: 999;
+		}
+		#btn:hover{
+			background: url(http://img.mukewang.com/535e0dc100010e9c00400080.jpg) no-repeat 0px -39px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="http://img.mukewang.com/535e0ce800015b7511902787.jpg" />
+	</div>
+	<div id="btn"></div>
+
+	<script type="text/javascript">
+		var btn = document.getElementById("btn");
+		var clientheight = document.documentElement.clientHeight;
+		var time = null;
+		var istop = true;
+		window.onscroll = function(){
+			var sctop = document.documentElement.scrollTop || document.body.scrollTop;
+			if (sctop >= clientheight) {
+				btn.style.display = "block";
+			} else {
+				btn.style.display = "none";
+			};
+			if(!istop){
+				clearInterval(time);
+			}
+			istop = false;
+		}
+		btn.onclick = function(){//返回顶部
+			time = setInterval(function(){
+				var sctop = document.documentElement.scrollTop || document.body.scrollTop;
+				var speed = Math.floor(-sctop/6);
+				document.documentElement.scrollTop = document.body.scrollTop = sctop + speed;
+				istop = true;
+				if(sctop == 0){
+					clearInterval(time);
+				}
+			},30);
+		}
+		console.log(clientheight);
+	</script>
+</body>
+</html>
