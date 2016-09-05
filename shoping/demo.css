@@ -1,0 +1,35 @@
+*{ margin: 0; padding: 0; }
+a{ text-decoration: none; color:#666; }
+body {padding: 20px;color: #666;}
+.fl{float: left;}
+.fr {float: right;}
+table{ width: 937px; border: 0; text-align: center; border-spacing: 0; border-collapse: collapse;}
+td,th{ border:solid 1px #d2deee; }
+td{ padding: 10px; color:#444;}
+thead{ background-color: #e2f2ff; border-top: solid 3px #b7c8e2; }
+img {width: 100px;height: 80px; margin-right: 10px;float: left;}
+thead tr{ height: 30px; }
+tbody tr{ height: 100px; }
+.checkbox{width: 80px;}
+.goods{ width: 320px; }
+.price{width:150px;}
+.count{ width: 110px; }
+.sum{ width: 170px; }
+.operation{ width: 100px; } 
+.goods span {width: 180px;margin-top: 20px;text-align: left;float: left;}
+.count .add, .count input, .count .reduce {width: 48px; height: 21px; float: left;position: relative;z-index: 0; text-align: center;}
+.count .add, .count .reduce {height: 23px;width: 17px;border: 1px solid #e5e5e5;background: #f0f0f0;text-align: center;line-height: 23px;color: #444;}
+
+.footer{ width: 935px; height: 48px; border:solid 1px #ccc; margin-top: 10px; background-color: #e8e8e8;}
+.tatol,.zh,.sel,.xz,.del{font-weight: bold;  text-align: center; height: 48px; line-height: 48px;}
+.tatol{ width: 104px; color: #000; border-left: solid 1px #ccc; background-color: #F9F9F9; }
+.zh{ margin-right: 20px; }
+.tsum,.sum{ color: red; }
+.sel{ margin-right: 20px; }
+.arrow{ display: none; margin-left: 20px; }
+.up{ display: inline; }
+.num{ color:red; font-weight: bold; }
+.xz{ margin-left: 16px; width: 100px; display: inline-block;}
+.del:hover,.operation:hover{ color: red; cursor:pointer; }
+.tab tr:hover{ background-color: RGB(238,246,255); }
+.add,.reduce{ cursor: pointer; }
